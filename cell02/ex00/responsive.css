@@ -1,0 +1,49 @@
+/* ทำให้ตารางเต็มหน้าจอ */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+/* ปรับขนาดตารางให้ครอบคลุมทั้งหน้า */
+table {
+    width: 100%;
+    height: 100vh;
+    border-collapse: collapse;
+    table-layout: fixed; /* ป้องกันการบีบเซลล์มากเกินไป */
+}
+
+/* ปรับขนาดเซลล์และเส้นขอบ */
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 50px;
+    font-size: 1.5rem;
+}
+
+/* สีพื้นหลังของแต่ละเซลล์ */
+.box1 {
+    background-color: lightblue;
+}
+
+.box2 {
+    background-color: lightcoral;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    table {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    td {
+        padding: 20px; /* ลดขนาด padding สำหรับจอเล็ก */
+        font-size: 1rem;
+    }
+}
