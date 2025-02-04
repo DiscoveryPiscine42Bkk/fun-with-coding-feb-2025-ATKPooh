@@ -1,0 +1,84 @@
+/* ตั้งค่าพื้นฐานของหน้าเว็บ */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* กล่องโปรไฟล์ */
+.profile-card {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+/* รูปโปรไฟล์ */
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+    object-fit: cover;
+}
+
+/* ชื่อผู้ใช้ */
+.login {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* คำอธิบาย */
+.description {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* โซเชียลไอคอน */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* เพิ่มช่องว่างระหว่างไอคอน */
+    margin-bottom: 15px; /* เว้นระยะห่างจากปุ่ม Contact */
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* ปุ่ม Contact */
+.contact-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px; /* เพิ่ม padding ให้ดูสมดุล */
+    width: auto; /* ปรับให้ปุ่มกว้างพอดีกับข้อความ */
+    max-width: 80%; /* ป้องกันปุ่มขยายเกินขอบ */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 15px; /* เพิ่มระยะห่างจากไอคอน */
+    border: none;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background-color: #0056b3;
+}
+
