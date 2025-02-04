@@ -1,0 +1,41 @@
+/* รีเซ็ตค่าพื้นฐานของเว็บ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* สไตล์พื้นหลังแบบ Parallax */
+.parallax {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    text-align: center;
+    position: relative;
+}
+
+/* พื้นหลังภาพที่ 1 */
+.bg1 {
+    background: url('https://media.tenor.com/CJAzSgd6Vu8AAAAe/cute-cat-cat.png') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+/* พื้นหลังภาพที่ 2 */
+.bg2 {
+    background: url('https://www.catster.com/wp-content/uploads/2023/11/Beluga-Cat-e1714190563227.webp') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+/* ส่วนเนื้อหา */
+.content {
+    padding: 50px;
+    background: black;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+}
