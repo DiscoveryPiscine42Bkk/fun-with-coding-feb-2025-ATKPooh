@@ -1,0 +1,15 @@
+[33m28e5948[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Added helloworld.html
+[33m35314c8[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Add build.sh to ex05
+[33m44342e5[m Added ex04 with argv.sh
+[33mfdb3bfa[m Remove discovery_piscine directory
+[33m04e6948[m Submit argv.sh for ex04
+[33m24b72af[m Move ex03 to correct location in cell00 and remove incorrect path
+[33m5d673bf[m Create ex03 folder with count_files.sh
+[33m82fa311[m Removed ex03 folder from repository
+[33m4bf0dad[m Add count_files.sh
+[33m0e3494f[m [cell00][ex02] Implement midLS
+[33m77d395d[m [cell00][ex02] Implement midLS
+[33ma90ac14[m ย้าย ex02 ไปยัง cell00 ตามที่กำหนดในชีท
+[33m2bee6a7[m เพิ่มไฟล์ midLS สำหรับ Exercise 02
+[33m36092da[m Added Exercise 01: Z
+[33me9ad86c[m Initial commit
