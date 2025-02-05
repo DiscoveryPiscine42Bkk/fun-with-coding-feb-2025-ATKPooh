@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Table</title>
     <style>
-        /* ทำให้ตารางเต็มหน้าจอ */
+        /* รีเซ็ต margin และ padding ของ body */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* ทำให้ตารางครอบคลุมเต็มหน้าจอ */
         table {
-            width: 100%;
+            width: 100vw;  /* ใช้ viewport width ทำให้เต็มหน้าจอ */
+            height: 100vh; /* ใช้ viewport height ทำให้เต็มหน้าจอ */
             border-collapse: collapse;
         }
 
-        /* ปรับขนาดเซลล์และเส้นขอบ */
         td {
             border: 1px solid black;
             text-align: center;
             padding: 50px;
         }
 
-        /* สีพื้นหลังของแต่ละเซลล์ */
         .box1 {
             background-color: lightblue;
         }
@@ -27,21 +31,16 @@
             background-color: lightcoral;
         }
 
-        /* ทำให้ตารางสามารถเลื่อนในหน้าจอเล็ก */
+        /* ทำให้ responsive */
         @media screen and (max-width: 600px) {
-            table {
-                display: block;
-                width: 100%;
-                overflow-x: auto;
-            }
             td {
-                padding: 20px; /* ลดขนาด padding สำหรับหน้าจอเล็ก */
+                padding: 20px; /* ลด padding เมื่อหน้าจอเล็ก */
             }
         }
     </style>
 </head>
 <body>
-    <h2>My Responsive Table</h2>
+    
     <table>
         <tr>
             <td class="box1">Hello</td>
