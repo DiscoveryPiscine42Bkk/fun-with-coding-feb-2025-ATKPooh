@@ -1,3 +1,3 @@
 #!/bin/bash
-ls -A | wc -l | tr -d '\n'
-echo '$'
+ls -1 | wc -l 
+
