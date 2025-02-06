@@ -12,7 +12,7 @@ body {
 /* กล่องโปรไฟล์ */
 .profile-card {
     background: white;
-    width: 300px;
+    width: 320px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -20,12 +20,22 @@ body {
     position: relative;
 }
 
+/* ตารางล่องหน */
+.profile-content {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.profile-content td {
+    padding: 5px;
+    text-align: center;
+}
+
 /* รูปโปรไฟล์ */
 .profile-img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    margin-top: 10px;
     object-fit: cover;
 }
 
@@ -33,7 +43,7 @@ body {
 .login {
     font-size: 18px;
     font-weight: bold;
-    margin: 10px 0;
+    margin-top: 10px;
 }
 
 /* คำอธิบาย */
@@ -47,8 +57,8 @@ body {
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 10px; /* เพิ่มช่องว่างระหว่างไอคอน */
-    margin-bottom: 15px; /* เว้นระยะห่างจากปุ่ม Contact */
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 .social-icons a {
@@ -56,9 +66,14 @@ body {
 }
 
 .social-icons img {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
 }
 
 /* ปุ่ม Contact */
@@ -66,14 +81,14 @@ body {
     display: inline-block;
     background-color: #007bff;
     color: white;
-    padding: 10px 20px; /* เพิ่ม padding ให้ดูสมดุล */
-    width: auto; /* ปรับให้ปุ่มกว้างพอดีกับข้อความ */
-    max-width: 80%; /* ป้องกันปุ่มขยายเกินขอบ */
+    padding: 10px 20px;
+    width: auto;
+    max-width: 80%;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
-    margin-top: 15px; /* เพิ่มระยะห่างจากไอคอน */
+    margin-top: 15px;
     border: none;
     cursor: pointer;
 }
@@ -81,4 +96,3 @@ body {
 .contact-btn:hover {
     background-color: #0056b3;
 }
-
