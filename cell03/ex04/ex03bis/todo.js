@@ -37,7 +37,7 @@ $(document).ready(function () {
         localStorage.setItem("tasks", JSON.stringify(tasks));
     }
 
-    // ฟังก์ชันโหลด Tasks จาก localStorage
+    
     function getCookie(name) {
         let nameEQ = name + "=";
         let cookiesArray = document.cookie.split("; ");
