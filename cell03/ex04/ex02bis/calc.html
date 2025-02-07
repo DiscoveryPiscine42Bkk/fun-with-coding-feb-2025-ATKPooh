@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator - It’s over 9000!</title>
+
+    <!-- โหลด jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <style>
         body {
             text-align: center;
             font-family: Arial, sans-serif;
             margin-top: 50px;
         }
+
         input, select, button {
             margin: 10px;
             padding: 10px;
@@ -34,15 +38,34 @@
 
     <script>
         $(document).ready(function() {
+            console.log("✅ jQuery Loaded! Calculator is ready.");
+
+            let inactivityTimer; // ตัวแปรสำหรับเก็บ Timer
+
+            function startInactivityTimer() {
+                // ล้าง Timer เก่า (ถ้ามี)
+                clearTimeout(inactivityTimer);
+
+                // ตั้ง Timer ใหม่: แจ้งเตือนหลังจากไม่มีการใช้งาน 30 วินาที
+                inactivityTimer = setTimeout(() => {
+                    console.log("⏰ Reminder: Please use the calculator...");
+                    alert("Please use me...");
+                }, 30000);
+            }
+
+            // เริ่มจับเวลาเมื่อหน้าเว็บโหลด
+            startInactivityTimer();
+
             $("#calculate-btn").on("click", function() {
                 let num1 = $("#num1").val();
                 let num2 = $("#num2").val();
                 let operator = $("#operator").val();
 
-                // ✅ ตรวจสอบค่าผิดพลาด
+                console.log(`User Input: num1 = "${num1}", num2 = "${num2}", operator = "${operator}"`);
+
                 if (!isValidNumber(num1) || !isValidNumber(num2)) {
+                    console.log("❌ Error: Invalid input (not a number or empty value)");
                     alert("Error :(");
-                    console.log("Error: Invalid input (non-numeric or negative values)");
                     return;
                 }
 
@@ -50,10 +73,9 @@
                 num2 = parseInt(num2);
                 let result;
 
-                // ✅ ตรวจสอบข้อผิดพลาดทางคณิตศาสตร์
                 if ((operator === "/" || operator === "%") && num2 === 0) {
+                    console.log("⚠️ Math Error: Division or Modulo by zero");
                     alert("It’s over 9000!");
-                    console.log("Math Error: Division or Modulo by zero");
                     return;
                 }
 
@@ -74,25 +96,21 @@
                         result = num1 % num2;
                         break;
                     default:
+                        console.log("❌ Error: Invalid operation");
                         alert("Error :(");
-                        console.log("Error: Invalid operation");
                         return;
                 }
 
-                // ✅ แสดงผลลัพธ์
+                console.log(`✅ Calculation Result: ${num1} ${operator} ${num2} = ${result}`);
                 alert("Result: " + result);
-                console.log("Result:", result);
+
+                // รีเซ็ต Timer เมื่อกดปุ่ม "Try me!"
+                startInactivityTimer();
             });
 
-            // ✅ ฟังก์ชันตรวจสอบค่าที่รับมา
             function isValidNumber(value) {
-                return /^[0-9]+$/.test(value); // ตรวจสอบว่าเป็นเลขจำนวนเต็มบวกเท่านั้น
+                return /^[0-9]+$/.test(value);
             }
-
-            // ✅ แจ้งเตือนทุก 30 วินาที
-            setInterval(() => {
-                alert("Please use me...");
-            }, 30000);
         });
     </script>
 
