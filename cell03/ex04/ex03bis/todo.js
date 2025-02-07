@@ -38,10 +38,15 @@ $(document).ready(function () {
     }
 
     // ฟังก์ชันโหลด Tasks จาก localStorage
-    function loadTasks() {
-        let savedTasks = localStorage.getItem("tasks");
-        if (savedTasks) {
-            JSON.parse(savedTasks).forEach(taskText => addTask(taskText));
+    function getCookie(name) {
+        let nameEQ = name + "=";
+        let cookiesArray = document.cookie.split("; ");
+        for (let i = 0; i < cookiesArray.length; i++) {
+            let cookie = cookiesArray[i];
+            if (cookie.indexOf(nameEQ) === 0) {
+                return decodeURIComponent(cookie.substring(nameEQ.length));
+            }
         }
+        return null;
     }
 });
