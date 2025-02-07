@@ -25,6 +25,19 @@ body {
     top: 0;
     z-index: 1000;
 }
+/* ป้องกัน navbar fixed บังเนื้อหา */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    z-index: 1000;
+}
+
+/* ปรับระยะห่างของ Section เพื่อให้เลื่อนไปตำแหน่งที่ถูกต้อง */
+#about, #projects, #contact {
+    scroll-margin-top: 80px; /* ปรับค่าตามความสูงของ Navbar */
+}
 
 .navbar ul {
     list-style: none;
@@ -137,7 +150,7 @@ body {
 }
 
 .footer {
-    text-align: center;
+    text-align: right;
     padding: 20px;
     background: #2c387e;
     color: white;
