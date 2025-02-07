@@ -103,29 +103,111 @@
         }
 
         /* ✅ Responsive Design */
-        @media (max-width: 768px) {
-            .portfolio-links {
-                flex-direction: column; /* เรียงจากบนลงล่าง */
-                gap: 20px;
-            }
+        /* ✅ ปรับขนาด Font และ Layout ให้พอดีกับหน้าจอเล็ก */
+        @media (max-width: 375px) and (max-height: 812px) {
+    .hero-content {
+        padding: 20px;
+        max-width: 85%;
+    }
 
-            .portfolio-img-container {
-                width: 80%; /* ปรับขนาดรูป */
-                max-width: 300px;
-            }
+    .hero h1 {
+        font-size: 24px;
+    }
 
-            .hero-content {
-                padding: 15px 30px;
-            }
+    .hero p {
+        font-size: 16px;
+    }
 
-            .hero h1 {
-                font-size: 24px; /* ลดขนาดหัวข้อ */
-            }
+    .portfolio-links {
+        flex-direction: column;
+        gap: 25px;
+    }
 
-            .hero p {
-                font-size: 16px;
-            }
-        }
+    .portfolio-img-container {
+        width: 85%;
+        max-width: 260px;
+    }
+
+    .portfolio-text {
+        font-size: 15px;
+    }
+
+    .hero::before {
+        filter: blur(8px);
+    }
+}
+
+
+/* ✅ รองรับหน้าจอมือถือขนาดเล็กมาก (ต่ำกว่า 480px) */
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 10px 15px;
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .portfolio-img-container {
+        width: 90%;
+        max-width: 220px;
+    }
+
+    .portfolio-text {
+        font-size: 14px;
+    }
+}
+
+    /* ✅ รองรับหน้าจอขนาดใหญ่ (Desktop Widescreen) */
+   
+    @media (max-width: 375px) {
+    html, body {
+        height: 100%;
+        width: 100%;
+        overflow-y: auto; /* เปิดใช้งานการเลื่อนขึ้นลง */
+    }
+
+    .hero-content {
+        padding: 15px 20px;
+        max-width: 80%;
+    }
+
+    .hero h1 {
+        font-size: 22px; /* ลดขนาดหัวข้อให้พอดีกับหน้าจอเล็ก */
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .portfolio-links {
+        display: flex;
+        flex-direction: column; /* เรียงจากบนลงล่างตลอดเวลา */
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .portfolio-img-container {
+        width: 90%; /* ปรับขนาดรูปให้เต็มหน้าจอมากขึ้น */
+        max-width: 300px;
+        margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างรูป */
+    }
+
+    .portfolio-text {
+        font-size: 14px; /* ลดขนาดตัวอักษรให้สมดุล */
+        padding: 6px 12px;
+        bottom: 10px; /* เลื่อนตัวอักษรลงด้านล่างของรูปภาพ */
+        position: absolute;
+    }
+}
+
+
     </style>
 </head>
 <body>
